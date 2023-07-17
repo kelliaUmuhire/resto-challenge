@@ -11,22 +11,17 @@ import {
 
 export default function App() {
   const toggleMenuBar = () => {
-    let menuBar = document.getElementById("menu_bar");
-    let navbar = document.getElementById("navbar");
+    if (innerWidth < 768) {
+      let menuBar = document.getElementById("menu_bar");
+      let navbar = document.getElementById("navbar");
 
-    if (menuBar && innerWidth < 768) {
-      if (menuBar.style.display === "none") {
-        menuBar.style.display = "flex";
-        menuBar.style.borderBottomWidth = "1px";
-      } else {
-        menuBar.style.display = "none";
-        menuBar.style.borderBottomWidth = "0px";
-      }
-      if (navbar) {
-        if (navbar.style.borderBottomWidth === "1px") {
-          navbar.style.borderBottomWidth = "0px";
+      if (menuBar && navbar) {
+        if (menuBar.style.display === "none") {
+          menuBar.style.display = "flex";
+          menuBar.style.backgroundColor = "#ef2828ab";
         } else {
-          navbar.style.borderBottomWidth = "1px";
+          menuBar.style.display = "none";
+          menuBar.style.backgroundColor = "transparent";
         }
       }
     }
@@ -42,22 +37,22 @@ export default function App() {
           <img src={logo} alt="Logo" className="w-8 h-8 pb-2" />
         </a>
         <div
-          className="text-white md:space-x-8 text-sm md:flex hidden flex-col md:flex-row md:relative absolute right-0 top-10 md:top-0 space-y-3 md:space-y-0 items-center w-full md:w-auto"
+          className="text-gray-200 md:space-x-8 md:text-xs text-base md:flex hidden flex-col md:flex-row md:relative absolute right-0 top-8 md:py-0 pt-5 pb-2 md:top-0 space-y-3 md:space-y-0 items-center w-full md:w-auto z-20 rounded-b"
           id="menu_bar"
         >
-          <a href="" className="border-b-2 pb-3">
+          <a href="" className="border-b-2 pb-3.5 text-white font-medium">
             Home
           </a>
-          <a href="" className="pb-3">
+          <a href="" className="pb-3.5">
             Menu
           </a>
-          <a href="" className="pb-3">
+          <a href="" className="pb-3.5">
             Services
           </a>
-          <a href="" className="pb-3">
+          <a href="" className="pb-3.5">
             Map
           </a>
-          <a href="" className="pb-3">
+          <a href="" className="pb-3.5">
             About
           </a>
         </div>
