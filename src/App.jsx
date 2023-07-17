@@ -89,10 +89,10 @@ export default function App() {
           className="absolute md:-right-24 -right-36 md:w-[42vh] w-[38vh] md:top-1/4 top-[60%] -z-10"
         />
         <div className="text-white px-6 md:mt-[18rem] mt-[22rem] z-20">
-          <div className="uppercase text-sm text-gray-200 font-semibold">
+          <div className="uppercase text-xs text-gray-200 font-semibold">
             LOREM IPSUM DOLOR SIT AMET, CONSETETUR.
           </div>
-          <div className="mt-2 font-bold text-5xl text-gray-200">
+          <div className="mt-2 font-extrabold text-5xl text-gray-200">
             Lorem Ipsum
           </div>
         </div>
